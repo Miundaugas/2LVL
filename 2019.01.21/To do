@@ -1,0 +1,9 @@
+soft-delete posts. DONE
+atvaizdavimas postu ir useriu pagal 'active'. DONE
+soft-delete users. DONE
+postu kurimas, irasyti active (sutvarkyti sql uzklausa). DONE
+postsController.php add() metodo echo forma perkelti i views puslapi..... DONE
+
+Registracijos metu patikrinti ar toks email jau egzisuotja...
+User login.
+Userio info editinimas(su sesija).

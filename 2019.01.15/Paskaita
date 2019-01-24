@@ -1,0 +1,11 @@
+MVC - model view control
+model<-controler-><-view<-user
+
+
+modelis -dirba su duomenimis.
+
+klases - savybes(klases kintamieji)/metodai(klases funkcija);
+
+1 klase per 1 faila.
+1 metodas atlieka 1 funkcija(kuo konkreciau);
+statinis metodas - 

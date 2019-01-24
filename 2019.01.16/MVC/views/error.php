@@ -1,0 +1,1 @@
+<img src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/404-error-page-templates.jpg">

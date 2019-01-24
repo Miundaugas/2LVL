@@ -1,0 +1,10 @@
+Naudojant $_GET
+
+array = [
+    1 => 
+        'code' => 'eur',
+        'value' => '1'
+]
+
+
+website id = gaunamas naudojant GET (values)

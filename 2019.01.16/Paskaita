@@ -1,0 +1,13 @@
+ATRIBUTES (variables)
+private - naudojamas tik esancioje klaseje.
+protected - naudojamas visose klasese su paveldimumu.
+public - naujamas betkur.
+__________________________________________________
+
+__construct - 
+
+
+
+
+
+Uzduotis: Naujas controlleris su error zinute (jei tokio puslapio nera).

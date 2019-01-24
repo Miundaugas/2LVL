@@ -1,0 +1,6 @@
+HELPERS - pagalbines funkcijos.
+
+"" - atvaizduod kintamjo reiksme;
+'' - atvaizduos kintamaji kaip stringa + greitesnes;
+
+NAME SPACE PSR-4 standartu;

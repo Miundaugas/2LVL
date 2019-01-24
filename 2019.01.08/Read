@@ -1,0 +1,1 @@
+Sukurta rekursyvine funkcija (kviecianti pati save), kuri tikrina masyvus, jei tai skaiciai (int), juos sudeda ir isveda rezultata (return $sum...), jei tai dar vienas masyvas, sukamas ciklas kuris tikrina ar tai masyvas ar ne.
