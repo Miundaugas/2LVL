@@ -1,5 +1,7 @@
 <?php
 
+// namespace MVC\controllers;
+
 include_once 'libs/Controller.php';
 include_once 'models/Comments.php';
 include_once 'helpers/FormHelper.php';
@@ -32,7 +34,8 @@ class CommentsController extends Controller {
 
 		$insert = new Comments();
 		$insert->insertComment($postId, $comment, $author);
-		header('Location: http://localhost/2LVL/2019.01.24/MVC/index.php/posts/show/'.$id);
+		echo 'Commented';
+		header('Refresh:2; url=http://localhost/2LVL/2019.01.24/MVC/index.php/posts/show/'.$id);
 	}
 
 	public function deleteComment($id){

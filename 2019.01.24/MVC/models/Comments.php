@@ -1,5 +1,7 @@
 <?php
 
+// namespace MVC\models;
+
 include_once 'libs/Database.php';
 
 class Comments {
@@ -12,7 +14,7 @@ class Comments {
 
 	public function insertComment($postId, $comment, $author){
 		$db = new Database();
-		$db->insert('comments')->columns('comment, author_id, post_id, active')->commentValues($comment, $author, $postId);
+		$db->insert('comments')->columns('comment, author_id, post_id, active')->values("'$comment', '$author', '$postId', '1'");
 		return $db->get();
 	}
 

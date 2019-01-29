@@ -1,5 +1,7 @@
 <?php
 
+// namespace MVC\libs;
+
 class Database {
 
 	private $conn;
@@ -72,11 +74,12 @@ class Database {
 	}
 
 	public function values($slug){
-		$this->query .= 'VALUES ("'.$slug.'") ';
+		$this->query .= 'VALUES ('.$slug.') ';
 		return $this;
 	}
 
-	public function commentValues($postId, $comment, $author, $active='1'){
-		$this->query .= 'VALUES ("'.$postId.'", "'.$comment.'", "'.$author.'", "'.$active.'") ';
-	}
+	// public function commentValues($postId, $comment, $author, $active='1'){
+	// 	$this->query .= 'VALUES ("'.$postId.'", "'.$comment.'", "'.$author.'", "'.$active.'") ';
+	// 	return $this;
+	// } 
 }

@@ -1,5 +1,7 @@
 <?php
 
+// namespace MVC\models;
+
 include_once 'libs/Database.php';
 
 class Users {
@@ -23,7 +25,7 @@ class Users {
 
 	public function insertUser($name, $email, $pass){
 		$db = new Database();
-		$db->insert('users')->columns('name, email, pass, active, role')->values("$name","$email","$pass", '1', '0');
+		$db->insert('users')->columns('name, email, pass, active, role')->values("'$name','$email','$pass', '1', '0'");
 		return $db->get();
 	}
 

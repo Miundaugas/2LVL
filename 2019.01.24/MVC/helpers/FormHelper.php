@@ -1,5 +1,7 @@
 <?php
 
+// namespace MVC\helpers;
+
 class FormHelper {
 	private $form = '';
 

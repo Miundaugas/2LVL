@@ -1,5 +1,7 @@
 <?php
 
+// namespace MVC\controllers;
+
 include_once 'libs/Controller.php';
 include_once 'models/Posts.php';
 include_once 'models/Users.php';
@@ -20,9 +22,17 @@ class PostsController extends Controller {
 		$this->view->title = 'Postas is DB'; //IDETI TITLE IS DB TITLE
 		$posts = new Posts();
 		$postsArray = [];
-		
-		
-		$this->view->posts = $posts->getPostsById($id);
+		$allPosts = $posts->getPostsById($id);
+		while ($postInfo = $allPosts->fetch_assoc()) {
+			$postAuthorId = $postInfo['author'];
+			$users = new users();
+			$currentUser = $users->getUserById($postAuthorId);
+			while ($authorName = $currentUser->fetch_assoc()){
+				$postInfo['author'] = $authorName;
+			}
+			$postsArray[] = $postInfo;
+		}
+		$this->view->posts = $postsArray;
 
 
 		// Komentaru istraukimas su autoriais pagal ID
@@ -33,7 +43,7 @@ class PostsController extends Controller {
 			$authorId = $array['author_id'];			
 			$users = new users();			
 			$userNames = $users->getUserById($authorId);
-			while ($names = $userNames->fetch_assoc()) {;
+			while ($names = $userNames->fetch_assoc()){
 				$array['author'] = $names;
 			}
 			$comments[] = $array;

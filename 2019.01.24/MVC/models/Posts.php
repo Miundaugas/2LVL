@@ -1,4 +1,7 @@
 <?php
+
+// namespace MVC\models;
+
 include_once 'libs/Database.php';
 
 class Posts {
@@ -17,7 +20,7 @@ class Posts {
 
 	public function insertPost($slug, $title, $content, $photoUrl){
 		$db = new Database();
-		$db->insert('posts')->columns('slug, title, content, author, photo, active')->values("$slug", "$title", "$content", '3', "$photoUrl", "1");
+		$db->insert('posts')->columns('slug, title, content, author, photo, active')->values("'$slug', '$title', '$content', '3', '$photoUrl', '1'");
 		return $db->get();
 	}
 

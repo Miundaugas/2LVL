@@ -1,5 +1,7 @@
 <?php
 
+// namespace MVC\controllers;
+
 include_once 'libs/Controller.php';
 
 class ErrorController extends Controller {

@@ -1,8 +1,12 @@
 <?php
 
+// namespace MVC\controllers;
+
 include_once 'libs/Controller.php';
 include_once 'models/Users.php';
 include_once 'helpers/FormHelper.php';
+include_once 'helpers/Helper.php';
+
 class UsersController extends Controller {
 	
 	public function index(){
@@ -57,7 +61,8 @@ class UsersController extends Controller {
 		$pass1 = $_POST['pass1'];
 		$pass2 = $_POST['pass2'];
 		if($pass1 == $pass2){
-			$pass = md5(md5($pass1.'druska'));
+			$passGen = new Helper();
+			$pass = $passGen->passGenerator($pass1);
 			$getEmails = new Users();		
 			$getEmails->insertUser($name, $email, $pass);
 
@@ -69,7 +74,10 @@ class UsersController extends Controller {
 			// 	} else {
 			// 		echo 'Vartotojas su '.$email.' pastu jau registruotas!';
 			// 	}
-			// }			
+			// }
+			echo 'Registered';
+			header('Refresh:2; url=http://localhost/2LVL/2019.01.24/MVC/index.php/users/login');
+
 		} else {
 			echo 'pass nevienodi';
 		}

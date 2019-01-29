@@ -1,5 +1,8 @@
 <?php
 // Pasiekiamas is controller.php
+
+// namespace MVC\libs;
+
 class View {
 	
 	private $viewCatalogPath = 'views/';

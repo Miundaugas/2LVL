@@ -1,5 +1,7 @@
 <?php
 
+// namespace MVC\helpers;
+
 class Helper{
 	public static function getSlug($line){
 		$line = strtolower($line);
@@ -8,7 +10,7 @@ class Helper{
 	}
 
 	public function passGenerator($pass){
-		$generatedPass = md5(md5($pass));
+		$generatedPass = md5(md5($pass.'druska'));
 		return $generatedPass;
 	}
 }

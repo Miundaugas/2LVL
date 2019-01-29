@@ -1,6 +1,6 @@
 <?php
-
 $allUsers = $this->users;?>
+
 	<div class="container">
 		<div class="row mb-2">
 			<?php while ($user = $allUsers->fetch_assoc()) { ?>

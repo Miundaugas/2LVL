@@ -1,5 +1,7 @@
 <?php
 
+// namespace MVC\libs;
+
 include_once 'View.php';
 
 class Controller {

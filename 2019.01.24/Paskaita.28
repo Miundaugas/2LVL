@@ -1,0 +1,8 @@
+crontab -e (edit)
+4 */2 * * * - kiekvienais metais, kiekviena menesi, kiekviena diena, kas 2 valandas kazka daryt.
+* * * * * 
+m h d m d
+
+
+UZDUOTIS - padaryti crona, kuris i .log faila siustu kas minute curent_time();
+https://www.adminschoice.com/crontab-quick-reference

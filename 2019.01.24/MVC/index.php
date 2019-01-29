@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if(isset($_SERVER['PATH_INFO'])){
 
 	$path = explode('/', $_SERVER['PATH_INFO']);
