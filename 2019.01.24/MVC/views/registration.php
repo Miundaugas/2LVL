@@ -1,4 +1,0 @@
-
-<div class="container">
-	<?php echo $this->form;?>
-</div>

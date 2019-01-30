@@ -1,11 +1,15 @@
 <?php
 
-// namespace MVC\controllers;
+namespace App\Controllers;
 
-include_once 'libs/Controller.php';
-include_once 'models/Users.php';
-include_once 'helpers/FormHelper.php';
-include_once 'helpers/Helper.php';
+// include_once 'libs/Controller.php';
+// include_once 'models/Users.php';
+// include_once 'helpers/FormHelper.php';
+// include_once 'helpers/Helper.php';
+use App\Libs\Controller;
+use App\Models\Users;
+use App\Helpers\FormHelper;
+use App\Helpers\Helper;
 
 class UsersController extends Controller {
 	

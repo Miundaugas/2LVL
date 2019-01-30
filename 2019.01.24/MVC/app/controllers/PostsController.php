@@ -1,13 +1,19 @@
 <?php
 
-// namespace MVC\controllers;
+namespace App\Controllers;
 
-include_once 'libs/Controller.php';
-include_once 'models/Posts.php';
-include_once 'models/Users.php';
-include_once 'models/Comments.php';
-include_once 'helpers/FormHelper.php';
-include_once 'helpers/Helper.php';
+// include_once 'libs/Controller.php';
+// include_once 'models/Posts.php';
+// include_once 'models/Users.php';
+// include_once 'models/Comments.php';
+// include_once 'helpers/FormHelper.php';
+// include_once 'helpers/Helper.php';
+use App\Libs\Controller;
+use App\Models\Posts;
+use App\Models\Users;
+use App\Models\Comments;
+use App\Helpers\FormHelper;
+use App\Helpers\Helper;
 
 class PostsController extends Controller {
 
@@ -32,6 +38,16 @@ class PostsController extends Controller {
 			}
 			$postsArray[] = $postInfo;
 		}
+
+		$form = new FormHelper('POST', 'http://localhost/2LVL/2019.01.24/MVC/index.php/comments/store/'.$id);
+		$form->textArea('content');
+		$form->input([
+			'name' => 'submit',
+			'type' => 'submit',
+			'value' => 'Comment'
+		]);
+		$this->view->form = $form->get();
+
 		$this->view->posts = $postsArray;
 
 
@@ -91,9 +107,12 @@ class PostsController extends Controller {
 		$photoUrl = $_POST['image'];
 		$content  = $_POST['content'];
 		$slug     = Helper::getSlug($title);
+		$author   = $_SESSION['id'];
 
 		$post = new Posts();
-		$post->insertPost($slug, $title, $content, $photoUrl);
+		$post->insertPost($slug, $title, $content, $author, $photoUrl);
+		echo 'Post created';
+		header('Refresh:2; url=http://localhost/2LVL/2019.01.24/MVC/index.php/posts');
 	}
 
 	public function edit($id){
@@ -139,15 +158,15 @@ class PostsController extends Controller {
 		$update->updatePost($id,$newSlug, $newTitle, $newContent, $author, $newUrl);
 	}
 
-	public function delete($id){
+	public function delete(){
+		$id = $_POST['btnId'];
 		$delete = new Posts();
 		$delete->deletePost($id);
-		echo 'Deleted';
 	}
 
-	public function test(){
-		$userName = $_POST['myusername'];		
-		$slug = Helper::getSlug($userName);
-		echo $slug;
-	}
+	// public function test(){
+	// 	$userName = $_POST['myusername'];		
+	// 	$slug = Helper::getSlug($userName);
+	// 	echo $slug;
+	// }
 }

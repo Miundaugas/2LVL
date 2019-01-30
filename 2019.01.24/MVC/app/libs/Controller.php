@@ -1,8 +1,8 @@
 <?php
 
-// namespace MVC\libs;
+namespace App\Libs;
 
-include_once 'View.php';
+use App\Libs\View;
 
 class Controller {
 

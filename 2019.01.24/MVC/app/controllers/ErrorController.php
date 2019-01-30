@@ -1,8 +1,8 @@
 <?php
 
-// namespace MVC\controllers;
-
-include_once 'libs/Controller.php';
+namespace App\Controllers;
+use App\Libs\Controller;
+// include_once 'libs/Controller.php';
 
 class ErrorController extends Controller {
 	public function index(){

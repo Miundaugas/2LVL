@@ -1,8 +1,9 @@
 <?php
 
-// namespace MVC\models;
+namespace App\Models;
 
-include_once 'libs/Database.php';
+// include_once 'libs/Database.php';
+use App\Libs\Database;
 
 class Users {
 	public function getAllUsers(){

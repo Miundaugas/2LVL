@@ -1,8 +1,8 @@
 <?php
 
-// namespace MVC\models;
+namespace App\Models;
 
-include_once 'libs/Database.php';
+use App\Libs\Database;
 
 class Comments {
 

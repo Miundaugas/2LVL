@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+require_once('vendor/autoload.php');
+
 if(isset($_SERVER['PATH_INFO'])){
 
 	$path = explode('/', $_SERVER['PATH_INFO']);
@@ -17,10 +19,10 @@ if(isset($_SERVER['PATH_INFO'])){
 	}
 
 	// var_dump($classFile);
-	if(file_exists('controllers/'.$classFile.'.php')){
-		include_once('controllers/'.$classFile.'.php');
-		
-		$object = new $classFile;
+	if(file_exists('app/controllers/'.$classFile.'.php')){
+
+		$class = 'App\Controllers\\'.$classFile;
+		$object = new $class();
 
 		if(!empty($path[2])){
 			$method = strtolower($path[2]);  // padaryti i mazasias raides //show
@@ -32,20 +34,20 @@ if(isset($_SERVER['PATH_INFO'])){
 					$object->$method();
 				}			
 			} else {
-				include_once('controllers/ErrorController.php');
-				$errorObject = new ErrorController();
+				// include_once('app/controllers/ErrorController.php');
+				$errorObject = new App\Controllers\ErrorController();
 				$errorObject->index();
 			}
 		} else {
 			$object->index();
 		}
 	} else {
-		include_once('controllers/ErrorController.php');
-		$errorObject = new ErrorController();
+		// include_once('app/controllers/ErrorController.php');
+		$errorObject = new App\Controllers\ErrorController();
 		$errorObject->index();
 	}
 } else {
-	include_once('controllers/IndexController.php');
-	$indexObject = new IndexController();
+	// include_once('app/controllers/IndexController.php');
+	$indexObject = new App\Controllers\IndexController();
 	$indexObject->index();
 }

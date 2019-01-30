@@ -1,11 +1,11 @@
 <?php
 // Pasiekiamas is controller.php
 
-// namespace MVC\libs;
+namespace App\Libs;
 
 class View {
 	
-	private $viewCatalogPath = 'views/';
+	private $viewCatalogPath = 'app/views/';
 
 	public function render($templatePath){
 		// /var/www/html/2LVL/2019.01.16/MVC/views/header.php(arba kitas page) is postscontroller.php (arba bet kurio kito page controllerio);

@@ -3,8 +3,6 @@
 $allPosts = $this->posts;?>
 
 <div class="container">
-	<input class="text-field" name="text-field" type="text">
-	<div id="resultarea"></div>
 	<div class="row mb-2">
 		<?php while ($posts = $allPosts->fetch_assoc()) { ?>
         <div class="col-md-6">

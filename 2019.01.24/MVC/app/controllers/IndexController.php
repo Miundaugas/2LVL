@@ -1,8 +1,9 @@
 <?php
 
-// namespace MVC\controllers;
+namespace App\Controllers;
+use App\Libs\Controller;
+// include_once 'libs/Controller.php';
 
-include_once 'libs/Controller.php';
 
 class IndexController extends Controller {
 	

@@ -1,8 +1,8 @@
 <?php
 
-// namespace MVC\models;
+namespace App\Models;
 
-include_once 'libs/Database.php';
+use App\Libs\Database;
 
 class Posts {
 
@@ -18,9 +18,9 @@ class Posts {
 		return $db->get();
 	}
 
-	public function insertPost($slug, $title, $content, $photoUrl){
+	public function insertPost($slug, $title, $content, $author, $photoUrl){
 		$db = new Database();
-		$db->insert('posts')->columns('slug, title, content, author, photo, active')->values("'$slug', '$title', '$content', '3', '$photoUrl', '1'");
+		$db->insert('posts')->columns('slug, title, content, author, photo, active')->values("'$slug', '$title', '$content', '$author', '$photoUrl', '1'");
 		return $db->get();
 	}
 

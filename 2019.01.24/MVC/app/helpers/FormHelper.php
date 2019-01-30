@@ -1,6 +1,6 @@
 <?php
 
-// namespace MVC\helpers;
+namespace App\Helpers;
 
 class FormHelper {
 	private $form = '';

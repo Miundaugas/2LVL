@@ -1,6 +1,6 @@
 <?php
 
-// namespace MVC\libs;
+namespace App\Libs;
 
 class Database {
 
