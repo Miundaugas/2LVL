@@ -11,10 +11,6 @@ use App\Helpers\Helper;
 // include_once 'helpers/Helper.php';
 
 class CommentsController extends Controller {
-	
-	// public function index(){
-	// 	echo 'index works';
-	// }
 
 	public function store($id){
 		$postId  = $id;

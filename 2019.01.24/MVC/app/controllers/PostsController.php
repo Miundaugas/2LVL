@@ -38,6 +38,7 @@ class PostsController extends Controller {
 			}
 			$postsArray[] = $postInfo;
 		}
+		$this->view->posts = $postsArray;
 
 		$form = new FormHelper('POST', 'http://localhost/2LVL/2019.01.24/MVC/index.php/comments/store/'.$id);
 		$form->textArea('content');
@@ -48,11 +49,8 @@ class PostsController extends Controller {
 		]);
 		$this->view->form = $form->get();
 
-		$this->view->posts = $postsArray;
-
-
 		// Komentaru istraukimas su autoriais pagal ID
-		$comment = new Comments();		
+		$comment = new Comments();
 		$comments = [];
 		$test =  $comment->getCommentByPostId($id);
 		while ($array = $test->fetch_assoc()) {
@@ -64,7 +62,6 @@ class PostsController extends Controller {
 			}
 			$comments[] = $array;
 		}
-
 		$this->view->comments = $comments;
 		$this->view->render('postsById');
 	}

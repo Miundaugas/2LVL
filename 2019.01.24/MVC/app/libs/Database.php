@@ -78,8 +78,18 @@ class Database {
 		return $this;
 	}
 
-	// public function commentValues($postId, $comment, $author, $active='1'){
-	// 	$this->query .= 'VALUES ("'.$postId.'", "'.$comment.'", "'.$author.'", "'.$active.'") ';
-	// 	return $this;
-	// } 
+	public function searchWhere($field){
+		$this->query .= 'WHERE '.$field.' ';
+		return $this;
+	}
+
+	public function searchLike($value){
+		$this->query .= 'LIKE '.$value.' ';
+		return $this;
+	}
+
+	public function searchOr($value){
+		$this->query .= 'OR '.$value.' ';
+		return $this;
+	}
 }

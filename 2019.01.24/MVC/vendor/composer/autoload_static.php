@@ -25,6 +25,7 @@ class ComposerStaticInitc462abc7c648415bffa4050a2e9eb018
         'App\\Controllers\\ErrorController' => __DIR__ . '/../..' . '/app/controllers/ErrorController.php',
         'App\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/controllers/IndexController.php',
         'App\\Controllers\\PostsController' => __DIR__ . '/../..' . '/app/controllers/PostsController.php',
+        'App\\Controllers\\SearchController' => __DIR__ . '/../..' . '/app/controllers/SearchController.php',
         'App\\Controllers\\TestController' => __DIR__ . '/../..' . '/app/controllers/TestController.php',
         'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UsersController.php',
         'App\\Helpers\\FormHelper' => __DIR__ . '/../..' . '/app/helpers/FormHelper.php',
