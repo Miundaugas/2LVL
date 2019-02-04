@@ -104,12 +104,15 @@ class PostsController extends Controller {
 		$photoUrl = $_POST['image'];
 		$content  = $_POST['content'];
 		$slug     = Helper::getSlug($title);
-		$author   = $_SESSION['id'];
-
+		$author   = $_SESSION['id'];		
+		
 		$post = new Posts();
+
+		$post->logInfo($author);
+
 		$post->insertPost($slug, $title, $content, $author, $photoUrl);
 		echo 'Post created';
-		header('Refresh:2; url=http://localhost/2LVL/2019.01.24/MVC/index.php/posts');
+		// header('Refresh:2; url=http://localhost/2LVL/2019.01.24/MVC/index.php/posts');
 	}
 
 	public function edit($id){

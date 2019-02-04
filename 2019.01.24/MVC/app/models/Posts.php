@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Libs\Database;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
 
 class Posts {
 
@@ -34,5 +36,11 @@ class Posts {
 		$db = new Database();
 		$db->update('posts')->set("slug = '$slug', title = '$title', content = '$content', author = '$author', photo = '$photo'")->where('id', $id);
 		return $db->get();
+	}
+
+	public function logInfo($author){
+		$log = new Logger('POST');
+		$log->pushHandler(new StreamHandler('/var/www/html/2LVL/2019.01.24/MVC/Logs/createdpost.log', Logger::INFO));
+		$log->addInfo("New Post created by user: $author");
 	}
 }

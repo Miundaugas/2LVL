@@ -1,0 +1,7 @@
+[2019-02-04 20:09:52] POST.INFO: Bar [] []
+[2019-02-04 20:09:52] POST.INFO: nauja info [] []
+[2019-02-04 20:11:13] POST.INFO: nauja info ["pinkis","makaule"] []
+[2019-02-04 20:29:17] POST.INFO: New Post ["7,'Created new post'"] []
+[2019-02-04 20:54:56] POST.INFO: 'New Post created by'.7. [] []
+[2019-02-04 20:55:22] POST.INFO: 'New Post created by user: '7 [] []
+[2019-02-04 20:55:37] POST.INFO: New Post created by user: 7 [] []

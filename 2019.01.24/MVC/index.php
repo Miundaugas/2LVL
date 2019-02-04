@@ -3,17 +3,6 @@ session_start();
 
 require_once('vendor/autoload.php');
 
-use Monolog\Logger;
-use Monolog\Handler\StreamHandler;
-
-$log = new Logger('name');
-// var_dump($log);
-$log->pushHandler(new StreamHandler('/var/www/html/2LVL/2019.01.24/MVC/Logs/test.log', Logger::WARNING));
-// add records to the log
-$log->warning('Foo');
-$log->error('Bar');
-
-
 if(isset($_SERVER['PATH_INFO'])){
 
 	$path = explode('/', $_SERVER['PATH_INFO']);
