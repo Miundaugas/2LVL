@@ -3,7 +3,11 @@
 namespace App\Controllers;
 
 class TestController {
-	public function __construct(){
+	public function index(){
 		echo 'veikia';
+	}
+
+	public function nope(){
+		echo 'neveikia';
 	}
 }

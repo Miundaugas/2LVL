@@ -56,7 +56,7 @@ $(".search-field").change(function(e){
     	data: {searchInfo:searchInfo},
     	cache: false,
     	success: function(data){
-    		alert(data);
+    		$('.search-result').html(data);
 		}
     })
 	// else {
