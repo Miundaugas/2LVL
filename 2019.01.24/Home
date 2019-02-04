@@ -1,5 +1,6 @@
 Sutikrinti linkus..... DONE
 Post insert metu sutvarkyti irasoma userio ID. DONE
+Padaryti paieskia tarp postu (slug/title/content) DONE
 
-Padaryti paieskia tarp postu (slug/title/content)
+
 Ant commento submito alertas su refreshu.

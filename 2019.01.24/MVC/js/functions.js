@@ -59,9 +59,6 @@ $(".search-field").change(function(e){
     		$('.search-result').html(data);
 		}
     })
-	// else {
-	// 	alert("Tokio posto nera");
-	// }	
 });
 
 
