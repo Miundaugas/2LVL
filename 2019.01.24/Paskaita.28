@@ -1,5 +1,5 @@
 crontab -e (edit)
-4 */2 * * * - kiekvienais metais, kiekviena menesi, kiekviena diena, kas 2 valandas kazka daryt.
+4 */2 * * * - kiekviena savaites diena, kiekviena menesi, kas 2 valandas...
 * * * * * 
 m h d m d
 
